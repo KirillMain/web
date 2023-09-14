@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="popochka">
+        <meta name="keywords" content="popa,pisya">
+        <title>Main page</title>
+        <style>
+            body { background: #2c2b2a; color: #fff}
+        </style>
+
+        <link rel="stylesheet" href="css/main.css">
+        
+        <!-- !!!ЛУЧШЕ КИДАТЬ В КОНЕЦ БОДИ!!!
+        можно внуть скрипт писать жс код -->
+        <script src="js/main.js"></script>
+    </head>
+
+    <body>
+        <!-- Comments -->
+
+        <!-- типо принято писать так -->
+        <header>popka</header>
+        <main>Main part of the site</main>
+        <aside>Боковая часть сайта</aside>
+        <footer>Футер</footer>
+
+        <progress value="50" max="100">
+            Загружено на 50%
+        </progress>
+
+        <details>
+            <summary>Details</summary>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, tenetur. Ex, praesentium enim inventore fuga, ullam doloribus est voluptatem placeat sit iusto commodi ut saepe possimus rerum porro suscipit alias.
+        </details>
+
+        <a href="#Down">Down</a>
+
+        <!-- 
+            b - жирный
+            i - курсив
+            u = подчеркнутый
+            s - зачеркнутый
+        -->
+        
+        <h1>За<small>гол</small>овок 1</h1>
+        <h6>Заголовок 6</h6><hr>
+
+        <pre>function some {
+            return "Some"
+}</pre>
+        
+        <code>let x = 0;</code>
+
+        <p>simple <b>text</b></p>
+        <p>simple <i>text</i></p>
+        <a name="Down"><p>simple <u>text</u> and Down</p></a>
+        <p>simple <s>text</s></p>
+
+        H<sub>2</sub>0<br>
+        x<sup>2</sup>
+        
+        <p><abbr title="popka piska">daar</abbr></p>
+
+        <address>Seatle, USA</address>
+
+        <a href="https://google.com", title="click", target="_blank">Go 
+            to the Google</a>
+        
+        <p><a href="lists.html", target="_blank">lists</a></p>
+
+        <p><a href="mailto:admin@gmail.com"></a></p>
+
+        <!-- IMAGE -->
+
+        <image src="https://i.ytimg.com/vi/FyZFK4LBjj0/hqdefault.jpg?sqp=-oaym
+        wEcCOADEI4CSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBdUXVm43GN-jzvc2e
+        qeo0_tjUwHA", width="100%", alt="spring", title="popa">
+
+        <image src="img/hqdefault.webp", alt="spring_from_pc", height="300">
+
+        <table border="1" width="300px">
+            <thead>
+                <tr>
+                    <th>Address</th>
+                    <th>Name</th>
+                </tr>
+            </thead>
+            <tbody align="center">
+                <tr>
+                    <td>Pobeda 98</td>
+                    <td>Anton</td>
+                </tr>
+                <tr>
+                    <td>Pobeda 18</td>
+                    <td>Konor</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div>simple text</div>
+        <div>simple text</div>
+
+        <span>simple text</span>
+        <span>simple text</span>
+
+        <form action="" method="post">
+            <!-- label for - сразу переводит на поле ввода -->
+            <label for="user_name">Input name: </label>
+            <input type="text", placeholder="Enter something", 
+            maxlength="5", name="user_name", id="user_name"><br>
+
+            <label for="adress", id="label_adress">Input adress: </label>
+            <input type="text", placeholder="Enter something", 
+            value="None", disabled, name="adress", id="adress"><br>
+
+            <label for="password">Input password: </label>
+            <input type="password" placeholder="Enter something" id="password">
+            <input type="email">
+            <input type="url"><br>
+
+            <input type="color">
+            <input type="date"><br><br>
+
+            <input type="checkbox"><br>
+            
+            <label>gay: </label>
+            <input type="radio" name="sex">
+            
+            <label>pedik: </label>
+            <input type="radio" name="sex"><br><br>
+
+            <input type="button" value="Send">
+            <input type="reset" value="Reset">
+        </form><br>
+
+        <form>
+            <!-- required - если не ввели данные, форму нельзя отправить -->
+            <textarea placeholder="Enter big text (leng 5)" 
+            maxlength="5"></textarea>
+            <button type="reset">Reset button</button>
+        </form>
+
+        <form>
+            <select>
+                <option selected disabled>---marka---</option>
+                <option>BMW</option>
+                <option>Audi</option>
+                <option>hondai salaris</option>
+            </select> <br>
+            <select multiple size="4">
+                <option disabled>---brend---</option>
+                <option>gucci</option>
+                <option>puma</option>
+                <option>adik</option>
+            </select>
+        </form>
+
+    </body>
+</html>
