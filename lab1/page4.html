@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форма регистрации</title>
+</head>
+<body>
+    <form id="main-form" method="post">
+        <label for="login">Login</label><br>
+        <input type="text" name="login" id="login" placeholder="Enter login"><br>
+
+        <label for="password">Password</label><br>
+        <input type="password" name="password" id="password" placeholder="Enter password"><br>
+        <label for="repeat_password">Password</label><br>
+        <input type="password" name="repeat_password" id="repeat_password" placeholder="Repeat password"><br>
+
+        <label for="mail">E-mail</label><br>
+        <input type="email" name="mail" id="mail" placeholder="Enter mail"><br><br>
+
+        <div>Self information</div>
+        <label for="date">Date</label><br>
+        <input type="date" name="date" id="date"><br>
+
+        <div>Sex</div>
+        <input type="radio" name="sex" id="male" value="male">
+        <label for="male">Male</label>
+        <input type="radio" name="sex" id="female" value="female">
+        <label for="female">Female</label>
+        <input type="radio" name="sex" id="helicopter" value="helicopter">
+        <label for="helicopter">Helicopter</label><br>
+
+        <div>Knowledge of programming languages</div>
+        <input type="checkbox" name="python" id="python">
+        <label for="python">Python</label><br>
+        <input type="checkbox" name="js" id="js">
+        <label for="js">Java Script</label><br>
+        <input type="checkbox" name="java" id="java">
+        <label for="java">Java</label><br>
+        <input type="checkbox" name="cPlusPkus" id="cPlusPkus">
+        <label for="cPlusPkus">C++</label><br>
+        <input type="checkbox" name="yoptascript" id="yoptascript">
+        <label for="yoptascript">YoptaScript</label><br>
+
+        <div>Faculty student</div>
+        <select name="faculty" id="faculty" style="width: 150px;">
+            <option value="Mexmat">Mexmat</option>
+            <option value="Urist">Urist</option>
+        </select><br><br>
+
+        <div>Additional information</div>
+        <textarea name="area" id="area" cols="30" rows="10" style="width: 400px; height: 100px;"></textarea><br><br>
+
+        <input type="submit" name="submit" id="submit" value="Register" style="width: 150px;">
+    </form>
+
+    <script src="page4/js.js"></script>
+</body>
+</html>
