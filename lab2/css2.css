@@ -1,0 +1,26 @@
+input[type="text"], input[type="password"], input[type="email"] {
+    color: darkgreen;
+    border-radius: 0% 30% 0% 30%;
+    background: lime;
+}
+
+div.knowledge label{
+    background: lime;
+    color: darkgreen;
+    font-size: 115%;
+}
+button {
+    width: 150px;
+    height: 25px;
+    border-radius: 0%;
+    
+    transition: all 5s;
+}
+
+button:hover {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
