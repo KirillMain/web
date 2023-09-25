@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css.css">
+</head>
+<body>
+    <div class="section">
+        <div class="ls" onmouseover="changeItem()" onmouseout="rechangeItem()">
+            <ul>
+                <li value="black" class="list" oncontextmenu="pkmAlert(0)">qwe1</li>
+                <li value="black" class="list" oncontextmenu="pkmAlert(1)">qwe2</li>
+                <li value="black" class="list" oncontextmenu="pkmAlert(2)">qwe3</li>
+                <li value="black" class="list" oncontextmenu="pkmAlert(3)">qwe4</li>
+                <li value="black" class="list" oncontextmenu="pkmAlert(4)">qwe5</li>
+            </ul>
+        </div>
+        <div class="check" id="check">
+            <input type="checkbox" onchange="twoYellow()" id="one">
+            <label for="one">Четные в желтый</label><br>
+            <input type="checkbox" onchange="oneWhiteBlue()" id="two">
+            <label for="two">Нечетные в бледно-голубой</label><br>
+            <input type="checkbox" onchange="all_i()" id="three">
+            <label for="three">Курсив</label><br>
+            <input type="checkbox" onchange="all_b()" id="four">
+            <label for="four">Жирный</label><br>
+            <input type="checkbox" onchange="textInRandomColor()" id="five">
+            <label for="five">Случайный цвет</label>
+        </div>
+    </div>
+
+    <script src="js.js"></script>
+</body>
+</html>
