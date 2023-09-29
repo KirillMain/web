@@ -3,31 +3,37 @@ function main() {
   console.log("main")
 
   var val = el.value;
-  try {
-    imgPaste("imgs/" + val + ".jpg", val);
-  } catch {}
-
+  var txt = "imgs/" + val + ".jpg";
+  // try {
+    
+  //   imgPaste(txt, val);
+  // } catch {}
+  const qwe = document.querySelector('.triger')
+  qwe.addEventListener('click', e => imgPaste(txt, val, e))
 }
 
 
-function imgPaste(path, id) {
-  try {
-    let qwe = document.getElementById('asd')
-    qwe.remove();
-  } catch (TypeError) { } //try чтобы предыдущие удалять
+function imgPaste(path, id, e) {
+  // try {
+  //   let qwe = document.getElementById('asd')
+  //   qwe.remove();
+  // } catch (TypeError) { } //try чтобы предыдущие удалять
+
   const icon = document.createElement('img');
   icon.src = path;
 
   const container = document.querySelector('#icons-container');
   icon.classList.add('circle');
   icon.id = id;
+
+  icon.style.transform = "translateY(-50%) translateX(-50%)";
+  icon.style.left = e.pageX + 'px'; // задаём элементу позиционирование слева
+  icon.style.top = e.pageY + 'px';
+
   container.append(icon);
+
   icon.addEventListener('contextmenu', (event) => context(id, path), {once:true});
-  // icon.removeEventListener('contextmenu', (event) => context(id, path));
-  
-  
 }
-// imgPaste("imgs/Harry Potter.jpg");
 
 
 function context(id, path) {
@@ -43,13 +49,8 @@ function context(id, path) {
 
   console.log("context")
   targett()
-
-  // const win = document.querySelector(".triger");
-
-  // win.addEventListener("click", targett);
-  // win.removeEventListener("click", targett);
-  
 }
+
 
 function targett() {
   let t = [0, 0];
@@ -58,24 +59,25 @@ function targett() {
   const win = document.querySelector(".triger");
   
   console.log("targett")
+  bool = true;
 
   win.addEventListener('dblclick', e => qwe(e), {once:true})
   window.addEventListener('mousemove', e => asd(e, el, el2, t), true)
-  // window.addEventListener('mousemove', e => )
-  // window.removeEventListener("click", asd)
 }
-// target();
 
-// const asd = aasd.bind(null);
 
-function asd(e=0, el=0, el2=0, t=0) { // при движении курсора
+var bool = true;
+
+function asd(e, el, el2, t) { // при движении курсора
   console.log("asd")
   
+  if (!bool) {
+    return
+  }
     
   const target = e.target; // определяем, где находится курсор
-
   if (!target) return
-
+  
   if (target.closest('.image')) { // если курсор наведён на фото
     el.classList.add('follow-cursor_active'); // элементу добавляем активный класс
     el.classList.remove('hide');
@@ -96,7 +98,6 @@ function asd(e=0, el=0, el2=0, t=0) { // при движении курсора
       container.append(img);
       setTimeout(() => img.remove(), 1000);
     }
-
   }
   else {
     el.classList.remove('follow-cursor_active'); // удаляем активный класс
@@ -110,14 +111,20 @@ function asd(e=0, el=0, el2=0, t=0) { // при движении курсора
 }
 
 function qwe(e) {
-  const el = document.querySelector("#icons-container");
-  el.style.transform = "translateY(-50%) translateX(-50%)";
-  el.style.left = e.pageX + 'px'; // задаём элементу позиционирование слева
-  el.style.top = e.pageY + 'px'; // задаём элементу позиционирование сверху
+  const el1 = document.querySelector("#icons-container");
+  el1.style.transform = "translateY(-50%) translateX(-50%)";
+  el1.style.left = e.pageX + 'px'; // задаём элементу позиционирование слева
+  el1.style.top = e.pageY + 'px'; // задаём элементу позиционирование сверху
   console.log('qwe')
+  bool = false;
+}
 
-  let t = [0, 0];
-  const el1 = document.querySelector("#image-container"); // ищем элемент, который будет следовать за курсором
-  const el2 = document.querySelector('#track-container');
-  window.removeEventListener('mousemove', e => asd(e, el1, el2, t), true)
+function dbclick() {
+  var el = document.querySelector('.triger');
+  if (el.classList.contains('hiden')) {
+    el.classList.remove('hiden');
+  }
+  else {
+    el.classList.add('hiden');
+  }
 }
