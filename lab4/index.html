@@ -9,23 +9,26 @@
 <body>
     <div class="box">
         <div class="input">
-            <div><input type="text">
-                Гермиона Грейнджер, Гарри Поттер, Рональд Уизли, Рубеус Хагрид.
+            <div id="input">
+                <input type="text" id="inp">
+                Hermione_Granger, Harry_Potter, Draco_Malfoy, Rubeus_Hagrid.
             </div><br>
-            <div><button>Отправить</button></div><br>
+            <div><button onclick="main()">Отправить</button></div><br>
         </div>
 
         <div class="image">
-            <img src="7ded6bda-7174-43eb-9baa-f8dae5f4955b.jpg" ondblclick="" onclick="" oncontextmenu="">
+            <div class="icons" id="icons-container"></div>
+            <img class="triger" src="backGround.jpg">
         </div>
     </div>
 
-    <div class="follow-cursor hide">
-        <img src="harry.jpg" class="circle">
+    <div class="hide" id="image-container">
+        <!-- <img src="imgs/harry.jpg" class="circle" id="asd"> -->
     </div>
 
-    <div class="follow-cursor2 hide">
-        <img src="track1.png" class="track_img">
+    <div class="hide" id="track-container">
+        <!-- <img src="track.png" class="track" id="1"> -->
+        <!-- <img src="track2.png" class="track" id="2"> -->
     </div>
 
     

@@ -7,7 +7,14 @@
     padding: 10px 0px 0px 10px;
 }
 
+#icons-container { 
+    position: absolute;
+}
 
+/* надо заебенить залупу с контейнером, логику реальзовать, чтобы туда сюда кидал */
+#image-container {
+    
+}
 
 .circle {
     width: 50px;
@@ -21,28 +28,42 @@
     transform: translateY(-50%) translateX(-50%); /* центрируем кружок */
     position: absolute; /* задаём абсолютное позиционирование, чтобы элемент не влиял на остальные элементы и его можно было бы позиционировать следом за курсором */
     z-index: 999; /* чтобы элемент был над остальными элементами */
-    pointer-events: none; /* чтобы сквозь элемент можно было взаимодействовать с элементами, находящимися под ним */
-    transition: width 0.64s, height 0.64s, border-radius 0.64s, background 0.64s;
+    pointer-events: none; /* чтобы сквозь элемент можно было взаимодействовать с элементами, находящимися под ним */    
 }
-
-.track_img {
-    width: 150px;
-    height: 50px;
-}
-
-.track_active {
+/* .track_active {
+    z-index: 998;
+    pointer-events: none;
     display: block;
-    transform: translateY(-50%) translateX(-90%); /* центрируем кружок */
-    position: absolute; /* задаём абсолютное позиционирование, чтобы элемент не влиял на остальные элементы и его можно было бы позиционировать следом за курсором */
-    z-index: 998; /* чтобы элемент был над остальными элементами */
-    pointer-events: none; /* чтобы сквозь элемент можно было взаимодействовать с элементами, находящимися под ним */
-    transition: width 0.64s, height 0.64s, border-radius 0.64s, background 0.64s;
-}
+    transform: translateY(-50%) translateX(-50%);
+} */
 
 .hide {
     margin: 0;
     padding: 0;
     visibility: hidden;
     position: absolute;
+
 }
 
+.track {
+    transform: translateY(-50%) translateX(-50%);
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    -webkit-animation: pulse 1s forwards;
+    display: block;
+    z-index: 998;
+    pointer-events: none;
+}
+
+@-webkit-keyframes pulse {
+    0% {
+        opacity: 100%;
+    }
+    75% {
+        opacity: 75%;
+    }
+    100% {
+        opacity: 0%;
+    }
+}
