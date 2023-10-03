@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>var 14</title>
+    <link rel="stylesheet" href="css.css">
+</head>
+<body>
+    <div>
+        <div class="vvod">
+            <input type="text" id="name" placeholder="Введите название">
+            <label for="name">Название растения</label>
+        </div>
+    
+        <div class="vvod">
+            <input type="text" id="vsxod" placeholder="Введите кол-во часов">
+            <label for="vsxod">Количество времени до первых всходов</label>
+        </div>
+    
+        <div class="vvod">
+            <input type="text" id="cvet" placeholder="Введите кол-во часов">
+            <label for="cvet">Количество времени до цветения</label>
+        </div>
+    
+        <div class="vvod">
+            <input type="text" id="harvest" placeholder="Введите кол-во часов">
+            <label for="harvest">Количество времени до получения урожая</label>
+        </div>
+
+        <div class="vvod">
+            <button onclick="show()">Отправить</button>
+        </div>
+    </div>
+
+    <div class="mark hide">
+        <ul>
+            <li>
+                <div id="name_mark">Название: </div>
+                <ul class="mark_ul" onclick="mark()">
+                    <li id="vsxod_mark">Количество времени до первых всходов: <br> </li>
+                    <li id="cvet_mark">Количество времени до цветения: <br> </li>
+                    <li id="harvest_mark">Количество времени до получения урожая: <br> </li>
+                    <li class="hide" id="input_text">
+                        <div>
+                            <label for="date">Введите дату посадки:</label><br>
+                            <input type="text" id="date" placeholder="дд.мм.гг 00:00"><br>
+                            <button id="date" onclick="send()">Отправить</button>
+                        </div>
+                    </li>
+                    <li class="res hide" id="vsxod_res">Первые всходы: <br> </li>
+                    <li class="res hide" id="cvet_res">Цветение: <br> </li>
+                    <li class="res hide" id="harvest_res">Урожай: <br> </li>
+                </ul>
+                
+            </li>
+            <!-- <li>
+                Название: 
+                <ul class="popa">
+                    <li>Количество времени до первых всходов: </li>
+                    <li>Количество времени до цветения: </li>
+                    <li>Количество времени до получения урожая:</li>
+                </ul>
+            </li> -->
+            
+        </ul>
+    </div>
+
+    <script src="js.js"></script>
+</body>
+</html>

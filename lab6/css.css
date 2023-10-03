@@ -1,0 +1,22 @@
+/* * {
+    margin: 0px;
+    padding: 0px;
+} */
+
+.vvod {
+    padding-bottom: 5px;
+}
+
+.popa {
+    list-style-type: none;
+}
+
+#date {
+    width: 150px;
+}
+
+.hide {
+    visibility: hidden;
+    position: absolute;
+}
+
