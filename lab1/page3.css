@@ -1,0 +1,15 @@
+img { 
+    width: 300px;
+    height: 200px;
+}
+li {
+    display: inline-block;
+}
+th {
+    font-weight: normal;
+}
+
+table {
+    width: 300px;
+    margin-left: -3px;
+}

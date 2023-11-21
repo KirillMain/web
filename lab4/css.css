@@ -11,11 +11,6 @@
     position: absolute;
 }
 
-/* надо заебенить залупу с контейнером, логику реальзовать, чтобы туда сюда кидал */
-#image-container {
-    
-}
-
 .circle {
     width: 50px;
     height: 50px;
@@ -26,16 +21,10 @@
 .follow-cursor_active {
     display: block;
     transform: translateY(-50%) translateX(-50%); /* центрируем кружок */
-    position: absolute; /* задаём абсолютное позиционирование, чтобы элемент не влиял на остальные элементы и его можно было бы позиционировать следом за курсором */
-    z-index: 999; /* чтобы элемент был над остальными элементами */
-    pointer-events: none; /* чтобы сквозь элемент можно было взаимодействовать с элементами, находящимися под ним */    
+    position: absolute;
+    z-index: 999;
+    pointer-events: none;    
 }
-/* .track_active {
-    z-index: 998;
-    pointer-events: none;
-    display: block;
-    transform: translateY(-50%) translateX(-50%);
-} */
 
 .hide {
     margin: 0;

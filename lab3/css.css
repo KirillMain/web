@@ -3,6 +3,11 @@
     margin-left: -35px;
     list-style-position:inside;
     color: black;
+    
+}
+
+.ls {
+    width: fit-content;
 }
 
 

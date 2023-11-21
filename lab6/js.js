@@ -1,6 +1,4 @@
 
-
-
 function show() {
     const name = document.getElementById('name').value;
     document.getElementById('name_mark').innerHTML += "<b>" + name + "</b>";
